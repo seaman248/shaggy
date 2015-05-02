@@ -3,23 +3,94 @@ html(lang="en")
 head
 	meta(charset="UTF-8")
 	title Shaggy Hair Studio | Uptown chic meets Downtown cool
-	link(rel="stylesheet", href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css")
+	link(rel="stylesheet", href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css")
 	link(rel="stylesheet", href="index.css")
 body
 	nav
-		.nav-button
-			i.fa.fa-bars
-		.nav-links
-			ul
-				li
-					a(href="#") Services
-				li
-					a(href="#") Reviews
-				li
-					a(href="#") Press
-				li
-					a(href="#") Gallary
-				li
-					a(href="#") About Us
-				li
-					a(href="#") Contact
+		.container
+			.nav-button
+				i.fa.fa-bars
+			.nav-links
+				ul
+					li
+						a(href="#") Services
+					li
+						a(href="#") Reviews
+					li
+						a(href="#") Press
+					li
+						a(href="#") Gallary
+					li
+						a(href="#") About Us
+					li
+						a(href="#") Contact
+	.landing
+		.container
+			.landing__info
+				.logo
+					img(src="./img/shaggy.png", alt="Shaggy logo")
+				.adress
+					p 1405 third ave new york, ny 10075 between e 79th and e 80th st
+				.phone
+					p.number 212 772 2288
+					p call us
+				.schedule
+					.days
+						p.day monday-friday
+						p.time 8 am-8 pm
+					.days
+						p.day saturday - sunday
+						p.time 10 am-8 pm
+			.landing__loreal-logo
+				img(src="./img/loreal.png", alt="Loreal logo")
+			.landing__footer
+				p Uptown chic meets Downtown cool
+	.content
+		.latest-news
+			h5 Latest news
+			.fb-resize
+			|<div id="fb-root"></div><script>(function(d, s, id) {  var js, fjs = d.getElementsByTagName(s)[0];  if (d.getElementById(id)) return;  js = d.createElement(s); js.id = id;  js.src = "https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.3";  fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script><div class="fb-post" data-href="https://www.facebook.com/permalink.php?story_fbid=747195531978253&amp;id=130935616937584&amp;substory_index=0" data-width="500"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/permalink.php?story_fbid=747195531978253&amp;id=130935616937584&amp;substory_index=0"><p>Our client Donets her hair for &#039;looks for love&#039; ,and another client touched by it and paid for the service ....there is amazing people in this world</p>Posted by <a href="https://www.facebook.com/pages/Shaggy-Hair-Studio/130935616937584">Shaggy Hair Studio</a> on <a href="https://www.facebook.com/permalink.php?story_fbid=747195531978253&amp;id=130935616937584&amp;substory_index=0">27 Апрель 2014 г.</a></blockquote></div></div>
+		.video
+			h5.video-h5 America’s
+			h4 Best of New York
+			.youtube-video
+				|<iframe width="560" height="315" src="https://www.youtube.com/embed/43huYB0QqA4" frameborder="0" allowfullscreen></iframe>
+			.reviews
+				.review
+					.review__avatar
+						img(src="img/avatar.jpg", alt="Avatar")
+					.review__body
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium rerum optio expedita harum laborum voluptatem aut veritatis impedit laudantium, quis! Nemo placeat voluptates modi eligendi labore rerum. Veniam, et cumque, illo eius ratione totam voluptatibus quidem, incidunt corporis quasi pariatur!
+					.review__subscribe
+						p Ashley S.
+					.review__stars
+						ul
+							li
+								i.fa.fa-star
+							li
+								i.fa.fa-star
+							li
+								i.fa.fa-star
+							li
+								i.fa.fa-star
+							li
+								i.fa.fa-star
+					p.review__more
+						a(href="#") more reviews
+	.homepage-prefooter
+		.container
+				p As a full service Salon, Shaggy Hair Studio offers full service makeovers that include hair cuts and styling for both men and women, hair coloring, highlighting, perms, straightening (OSHA formaldehyde safe) and other conditioning treatments. Shaggy Hair Studio also offers makeup services that include L’Oreal Professional products and more. Our team of professional stylists use only the highest quality products including restoring shampoos, conditioners and treatments. Featured in Allure, Glamour, and Time Out Shaggy Hair Studio specializes in transforming dull, flat hair and appearance using our special hydration therapy and innovative restoring procedures that create a healthy, vibrant and sexy look.
+				p As a full service Salon, Shaggy Hair Studio offers full service makeovers that include hair cuts and styling for both men and women, hair coloring, highlighting, perms, straightening (OSHA formaldehyde safe) and other conditioning treatments. Shaggy Hair Studio also offers makeup services that include L’Oreal Professional products and more. Our team of professional stylists use only the highest quality products including restoring shampoos, conditioners and treatments. Featured in Allure, Glamour, and Time Out Shaggy Hair Studio specializes in transforming dull, flat hair and appearance using our special hydration therapy and innovative restoring procedures that create a healthy, vibrant and sexy look.
+				p Come for your free consultation today!
+	footer
+		.container
+			.footer-addres
+				p 1405 third ave new york, ny 10075 between e 79th and e 80th st
+			.footer-phone
+				p 212 772 2288
+			.footer-schedule
+				p <strong> monday-friday </strong> 8 am-8 pm
+				p <strong> saturday-sunday </strong> 10 am-8 pm
+	script(type="application/javascript", src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+	script
+		include ./js/index.js

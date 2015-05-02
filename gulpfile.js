@@ -45,6 +45,7 @@ gulp.task('html', function(){
 gulp.task('watch', function(){
 	gulp.watch('./src/jade/**/*.jade', ['html']);
 	gulp.watch('./src/styl/**/*.styl', ['styl']);
+	gulp.watch('./src/jade/js/**/*.js', ['html']);
 	gulp.watch('./src/js/**/*.js', ['browserify']);
 });
 
