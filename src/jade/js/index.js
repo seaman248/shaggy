@@ -63,6 +63,7 @@
 $(document).ready(function(){
 	$window = $(window);
 	$landing = $('.landing');
+	$landingContainer = $('.landing .container')
 	$nav = $('nav');
 	$navLinks = $('.nav-links');
 	$navButton = $('.nav-button i');
@@ -75,22 +76,34 @@ $(document).ready(function(){
 	});
 
 	$('.fb-resize').autoResizeFbPost();
-
-	$navButton.click(function(){
-		$navLinks.toggle();
-	});
+	// $navButton.click(function(){
+	// 	$navLinks.toggle();
+	// });
+	if (window.matchMedia('(max-device-width: 960px)').matches || window.matchMedia('(max-width: 960px)').matches){
+		$navButton.on('click',function(){
+			if($navLinks.is(':visible')){
+				$navLinks.slideUp();
+			} else {
+				$navLinks.slideDown();
+			}
+			return false;
+		})
+	}
+	$lorealLogo = $('.landing__loreal-logo')
+	var autoHeightLanging = function(){
+		var lorealMarginTop;
+			lorealMarginTop =
+				$window.height() 
+				- 250 
+				- $('.landing__info').height() 
+				- $lorealLogo.height() 
+				- $('.landing__footer').height();
+		$lorealLogo.css({
+			'margin-top': lorealMarginTop
+		});
+	}
+	autoHeightLanging();
 	$window.resize(function(){
-		if($window.width() > 960){
-			$navLinks.css({
-				display: 'block'
-			});
-		} else {
-			$navLinks.css({
-				display: 'none'
-			})
-			$navButton.click(function(){
-				$navLinks.toggle();
-			});
-		}
+		autoHeightLanging();
 	});
 });

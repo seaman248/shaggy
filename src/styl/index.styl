@@ -40,7 +40,7 @@ nav
 		color black
 		transition color 0.12s ease-out 0.09s
 
-+media-query( all, min-width 960px )
++media-query( all, min-device-width 960px, min-width 960px  )
 	.fixed-nav
 		position fixed
 		background-color black
@@ -64,20 +64,21 @@ nav
 
 
 .landing
-	min-height 550px
 	background black
 	padding em(10)
 	padding-top em(150)
+	background none
+	background-color black
 	.container
 		background url('./img/shaggy-background.jpg')
 		background-position 50%
 		background-repeat no-repeat
 		background-size cover
+		clearfix()
 .landing__info
 	color white
 	text-align center
 	font-size em(14)
-	clearfix()
 	position relative
 	top -130px
 	margin 0
@@ -102,30 +103,34 @@ nav
 			col(6)
 			max-width 100%
 .landing__footer
+	col(12)
 	color white
 	font-size em(14)
 	font-style italic
 	text-align center
-	margin-top 400px
+	margin-top em(50)
 .landing__loreal-logo
-	width 100%
+	col(12)
 	text-align right
-	position relative
-	top 200px
+	margin-top em(100)
 
-+media-query( all, min-width 960px )
++media-query( all, min-device-width 960px, min-width 960px  )
 	.landing
-		max-height 800px
 		background-position top center
 		background-attachment fixed
 		padding-top 15px
+		background url('./img/shaggy-background.jpg')
+		background-position top center
+		background-repeat no-repeat
+		background-size cover
 		.container
 			gs()
+			background none
+
 	.landing__footer
 		text-align left
-		margin-top 600px
 	.landing__loreal-logo
-		top 500px
+		text-align right
 	.landing__info
 		col(4)
 		top 0
@@ -177,7 +182,7 @@ nav
 		font-size em(16)
 		padding-bottom em(30)
 
-+media-query( all, min-width 960px )
++media-query( all, min-device-width 960px, min-width 960px  )
 	.content
 		gs('fixed')
 		.latest-news
@@ -248,7 +253,7 @@ nav
 	p
 		margin em(15) 0
 		
-+media-query( all, min-width 960px )
++media-query( all, min-device-width 960px, min-width 960px  )
 	.homepage-prefooter
 		.container
 			gs('fixed')
@@ -279,7 +284,7 @@ footer
 	strong
 		font-weight bold
 
-+media-query( all, min-width 960px )
++media-query( all, min-device-width 960px, min-width 960px  )
 	footer
 		.container
 			gs('fixed')
