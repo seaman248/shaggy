@@ -93,8 +93,8 @@ $(document).ready(function(){
 	var autoHeightLanging = function(){
 		var lorealMarginTop;
 		var diff;
-		if(screen.width < 960){
-			diff = 500;
+		if(screen.width < 760){
+			diff = 550;
 		} else {
 			diff = 130;
 		}

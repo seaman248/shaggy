@@ -31,24 +31,28 @@ nav
 	col(3)
 	display none
 	margin em(5) 0 0
-	padding em(5) 0
-	background-color #C8C8C8
+	padding em(5) em(20)
+	background-color black
 	li
-		padding em(10) em(5)
+		padding em(15) em(5)
 	a
 		text-decoration none
-		color black
+		color white
 		transition color 0.12s ease-out 0.09s
 
 +media-query( only screen, min-device-width 320px, max-device-width 667px)
+	nav
+		position fixed
 	.nav-button
 		i
 			font-size em(100)
 	.nav-links
 		li
-			padding em(20) 0
+			padding em(45) 0
 		a
-			font-size em(30)
+			font-size em(40)
+			font-weight bold
+			color white
 
 
 +media-query( all, min-device-width 960px, min-width 960px  )
@@ -81,7 +85,7 @@ nav
 	background none
 	background-color black
 	.container
-		background url('./img/shaggy-background.jpg')
+		background url('./img/shaggy-background-mobile.jpg')
 		background-position 50%
 		background-repeat no-repeat
 		background-size cover
@@ -127,9 +131,9 @@ nav
 
 +media-query( only screen, min-device-width 320px, max-device-width 667px)
 	.landing
-		padding-top rem(300)
+		padding-top rem(450)
 	.landing__info
-		top em(-300)
+		top rem(-420)
 		.logo
 			img
 				width 40%
@@ -143,6 +147,8 @@ nav
 				font-size em(30)
 	.landing__footer
 		font-size em(25)
+		background-color black
+		padding em(10) 0
 	.landing__loreal-logo
 		img
 			width 30%
