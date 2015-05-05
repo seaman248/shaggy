@@ -40,6 +40,17 @@ nav
 		color black
 		transition color 0.12s ease-out 0.09s
 
++media-query( only screen, min-device-width 320px, max-device-width 667px)
+	.nav-button
+		i
+			font-size em(100)
+	.nav-links
+		li
+			padding em(20) 0
+		a
+			font-size em(30)
+
+
 +media-query( all, min-device-width 960px, min-width 960px  )
 	.fixed-nav
 		position fixed
@@ -85,7 +96,7 @@ nav
 	padding 0
 	gs('fluid')
 	.adress
-		margin em(15) 0
+		margin 15px 0
 		line-height 1.3
 		text-transform uppercase
 	.phone
@@ -113,6 +124,28 @@ nav
 	col(12)
 	text-align right
 	margin-top em(100)
+
++media-query( only screen, min-device-width 320px, max-device-width 667px)
+	.landing
+		padding-top rem(300)
+	.landing__info
+		top em(-300)
+		.logo
+			img
+				width 40%
+		.adress
+			padding 0 em(300)
+			font-size em(13)
+			margin em(45) 0
+		
+		.schedule
+			p
+				font-size em(30)
+	.landing__footer
+		font-size em(25)
+	.landing__loreal-logo
+		img
+			width 30%
 
 +media-query( all, min-device-width 960px, min-width 960px  )
 	.landing
@@ -240,6 +273,18 @@ nav
 			font-style italic
 			font-size em(14)
 
++media-query( only screen, min-device-width 320px, max-device-width 667px)
+	.review
+		.review__subscribe
+			p
+				font-size em(35)
+		.review__stars
+			li
+				font-size em(35)
+		.review__more
+			padding em(14) 0
+			a
+				font-size em(35)
 .homepage-prefooter
 	.container
 		gs('fluid')
@@ -292,4 +337,8 @@ footer
 		col(4)
 	
 
-
++media-query( only screen, min-device-width 320px, max-device-width 667px)
+	.footer-addres p, .footer-phone p, .footer-schedule p
+		font-size em(35)
+	.homepage-prefooter p
+		font-size em(15)

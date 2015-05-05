@@ -92,12 +92,18 @@ $(document).ready(function(){
 	$lorealLogo = $('.landing__loreal-logo')
 	var autoHeightLanging = function(){
 		var lorealMarginTop;
-			lorealMarginTop =
-				$window.height() 
-				- 250 
-				- $('.landing__info').height() 
-				- $lorealLogo.height() 
-				- $('.landing__footer').height();
+		var diff;
+		if(screen.width < 960){
+			diff = 500;
+		} else {
+			diff = 130;
+		}
+		lorealMarginTop =
+			$window.height() 
+			- diff
+			- $('.landing__info').height() 
+			- $lorealLogo.height() 
+			- $('.landing__footer').height();
 		$lorealLogo.css({
 			'margin-top': lorealMarginTop
 		});
