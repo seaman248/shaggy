@@ -67,7 +67,7 @@ $(document).ready(function(){
 	$nav = $('nav');
 	$navLinks = $('.nav-links');
 	$navButton = $('.nav-button i');
-
+	$navBefore = $('.nav-before');
 	$window.scroll(function(){
 		if($window.scrollTop() > $landing.height()){
 			$nav.addClass('fixed-nav');
@@ -82,13 +82,20 @@ $(document).ready(function(){
 		$navButton.on('click',function(){
 			if($navLinks.is(':visible')){
 				$navLinks.slideUp();
-				$('.nav-before').hide();
+				$navBefore.hide();
+				$("html,body").css("position","relative");
 			} else {
 				$navLinks.slideDown();
-				$('.nav-before').show();
+				$navBefore.show();
+				$("html,body").css("position","fixed");
 			}
 			return false;
 		});
+		$navBefore.on('click', function(){
+			$navLinks.slideUp();
+			$navBefore.hide();
+			$("html,body").css("position","relative");
+		})
 	}
 	$lorealLogo = $('.landing__loreal-logo')
 	var autoHeightLanging = function(){
