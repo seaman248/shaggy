@@ -190,18 +190,21 @@ $(document).ready(function(){
 			if($navLinks.is(':visible')){
 				$navLinks.slideUp();
 				$navBefore.hide();
-				$("html,body").css("position","relative");
+				$('body').unbind('touchmove')
+				$("html,body").css("overflow","auto");
 			} else {
 				$navLinks.slideDown();
 				$navBefore.show();
-				$("html,body").css("position","fixed");
+				$('body').bind('touchmove', function(e){e.preventDefault()});
+				$("html,body").css("overflow","hidden");
 			}
 			return false;
 		});
 		$navBefore.on('click', function(){
 			$navLinks.slideUp();
 			$navBefore.hide();
-			$("html,body").css("position","relative");
+			$('body').unbind('touchmove')
+			$("html,body").css("overflow","auto");
 		})
 	}
 	$lorealLogo = $('.landing__loreal-logo')
