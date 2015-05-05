@@ -67,6 +67,7 @@ $(document).ready(function(){
 	$nav = $('nav');
 	$navLinks = $('.nav-links');
 	$navButton = $('.nav-button i');
+
 	$window.scroll(function(){
 		if($window.scrollTop() > $landing.height()){
 			$nav.addClass('fixed-nav');
@@ -76,18 +77,18 @@ $(document).ready(function(){
 	});
 
 	$('.fb-resize').autoResizeFbPost();
-	// $navButton.click(function(){
-	// 	$navLinks.toggle();
-	// });
+
 	if (window.matchMedia('(max-device-width: 960px)').matches || window.matchMedia('(max-width: 960px)').matches){
 		$navButton.on('click',function(){
 			if($navLinks.is(':visible')){
 				$navLinks.slideUp();
+				$('.nav-before').hide();
 			} else {
 				$navLinks.slideDown();
+				$('.nav-before').show();
 			}
 			return false;
-		})
+		});
 	}
 	$lorealLogo = $('.landing__loreal-logo')
 	var autoHeightLanging = function(){

@@ -6,17 +6,25 @@ body
 	font-family Verdana, sans-serif
 
 nav
-	position absolute
+	position fixed
 	width 100%
 	padding em(10) em(5)
 	background-color none
-	z-index 100
+	z-index 10000
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
 	.container
 		gs()
+.nav-before{
+	background-color rgba(255, 255, 255, 0.4)
+	width 100%
+	height 300%
+	position fixed
+	z-index 20
+	display none
+}
 .fixed-nav
 	position fixed
 	.nav-button
@@ -28,34 +36,36 @@ nav
 		cursor pointer
 		color white
 .nav-links
-	col(3)
 	display none
 	margin em(5) 0 0
 	padding em(5) em(20)
 	background-color black
 	li
 		padding em(15) em(5)
+		text-align center
 	a
 		text-decoration none
 		color white
+		font-weight bold
 		transition color 0.12s ease-out 0.09s
 
 +media-query( only screen, min-device-width 320px, max-device-width 667px)
-	nav
-		position fixed
 	.nav-button
 		i
 			font-size em(100)
 	.nav-links
+		col(12)
+		display none
+		margin 0
 		li
 			padding em(45) 0
 		a
-			font-size em(40)
-			font-weight bold
-			color white
+			font-size em(50)
 
 
 +media-query( all, min-device-width 960px, min-width 960px  )
+	nav
+		position absolute
 	.fixed-nav
 		position fixed
 		background-color black
