@@ -244,12 +244,15 @@ nav
 	clearfix()
 	h5
 		font-size em(30)
-		line-height em(25)
 		font-weight bold
 		position relative
 		font-family serif
 		font-weight 400
 		font-size em(45)
+	h4
+		text-transform uppercase
+		font-weight bold
+		font-size em(16)
 	.latest-news
 		col(12)
 		text-align center
@@ -272,11 +275,6 @@ nav
 			padding em(5)
 			background-color #D6D6D6
 			border 1px solid #DADADA
-	h4
-		text-transform uppercase
-		font-weight bold
-		font-size em(16)
-		padding-bottom em(30)
 
 +media-query( all, min-device-width 960px, min-width 960px  )
 	.content
@@ -285,6 +283,11 @@ nav
 			col(6)
 		.video
 			col(6)
+		.content-box-header
+			padding em(15) 0 0
+			margin-bottom em(15)
+		.latest-news-h5
+			margin-bottom em(11)
 
 .reviews
 	gs('fluid')
