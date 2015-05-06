@@ -16,7 +16,7 @@ nav
 	-o-transition: all 0.5s ease;
 	transition: all 0.5s ease;
 	.container
-		gs()
+		gs('fluid')
 .nav-before{
 	background-color rgba(255, 255, 255, 0.4)
 	width 100%
@@ -73,6 +73,8 @@ nav
 +media-query( all, min-device-width 960px, min-width 960px  )
 	nav
 		position absolute
+		.container
+			gs()
 	.fixed-nav
 		position fixed
 		background-color black
@@ -365,6 +367,30 @@ nav
 		padding em(14) 0
 		a
 			font-size em(35)
+
+.magazine-links
+	.container
+		gs('fluid')
+	padding em(20) 0
+	h4
+		font-size em(30)
+		font-weight bold
+		position relative
+		font-family serif
+		font-weight 400
+		font-size em(45)
+		padding-bottom em(10)
+		text-align center
+	.imgs
+		text-align center
+	img
+		height 60px
+		padding 0 em(10)
++media-query( all, min-device-width 960px, min-width 960px  )
+	.magazine-links
+		.container
+			gs()
+
 .homepage-prefooter
 	.container
 		gs('fluid')
@@ -416,6 +442,7 @@ nav
 		font-size em(20)
 		padding em(5)
 		margin-bottom em(5)
+		border none
 	label
 		font-size em(15)
 	textarea
@@ -498,3 +525,7 @@ footer
 		font-size em(35)
 	.homepage-prefooter p
 		font-size em(15)
+
+.yelp-wiget
+	text-align center
+	padding 30px 0 10px
