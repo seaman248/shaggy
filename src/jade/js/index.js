@@ -76,19 +76,40 @@ $(document).ready(function(){
 	$navButton = $('.nav-button i');
 	$navBefore = $('.nav-before');
 	$navLogo = $('.nav-logo');
-	$window.scroll(function(){
-		if($window.scrollTop() > $('.landing__info').height()){
-			if(!isMobile(960)){
+	if($landing.length){
+		$window.scroll(function(){
+			if($window.scrollTop() > $('.landing__info').height()){
+				if(!isMobile(960)){
+					$nav.addClass('fixed-nav');
+					$navLinks.addClass('nav-links-with-logo');
+					$navLogo.show();
+				}
+			} else {
+				$nav.removeClass('fixed-nav');
+				$navLinks.removeClass('nav-links-with-logo');
+				$navLogo.hide();
+			}
+		});
+	} else {
+		var showNavBar = function(){
+			if(!$navButton.is(':visible')){
 				$nav.addClass('fixed-nav');
 				$navLinks.addClass('nav-links-with-logo');
 				$navLogo.show();
+				$('.content').css({
+					'padding-top': $nav.height()+30
+				})
+			} else {
+				$nav.removeClass('fixed-nav');
+				$navLogo.hide();
+				$navLinks.removeClass('nav-links-with-logo');
 			}
-		} else {
-			$nav.removeClass('fixed-nav');
-			$navLinks.removeClass('nav-links-with-logo');
-			$navLogo.hide();
 		}
-	});
+		showNavBar();
+		$window.resize(function(){
+			showNavBar();
+		})
+	}
 
 	$('.map-container').height($('.contact-form').height())
 
