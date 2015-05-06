@@ -69,7 +69,6 @@ nav
 +media-query( all, min-device-width 960px, min-width 960px  )
 	nav
 		position absolute
-		max-width 100%
 	.fixed-nav
 		position fixed
 		background-color black
@@ -79,6 +78,8 @@ nav
 		col(12)
 		background-color rgba(255, 255, 255, 0)
 		float right
+		padding em(5) em(0)
+		margin-right 0
 		ul
 			float right
 		li
@@ -86,6 +87,8 @@ nav
 			padding-left em(15)
 			font-size em(13)
 			font-weight bold
+		li:last-child
+			padding-right 0
 		a
 			color white
 		a:hover
@@ -202,8 +205,9 @@ nav
 	.landing__loreal-logo
 		text-align right
 	.landing__info
-		col(4)
-		top 0
+		col(3.8)
+		top 10px
+		margin 0
 		.phone .number
 			font-size em(17)
 		.schedule
