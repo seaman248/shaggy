@@ -8,7 +8,7 @@ body
 nav
 	position fixed
 	width 100%
-	padding em(10) em(5)
+	padding em(10) em(0)
 	background-color none
 	z-index 10000
 	-webkit-transition: all 0.5s ease;
@@ -69,6 +69,7 @@ nav
 +media-query( all, min-device-width 960px, min-width 960px  )
 	nav
 		position absolute
+		max-width 100%
 	.fixed-nav
 		position fixed
 		background-color black
@@ -200,6 +201,9 @@ nav
 		font-weight bold
 		position relative
 		top em(15)
+		font-family serif
+		font-weight 400
+		font-size em(45)
 	.latest-news
 		col(12)
 		text-align center
@@ -223,11 +227,6 @@ nav
 			background-color #D6D6D6
 			border 1px solid #DADADA
 	.video-h5
-		font-family serif
-		font-weight 400
-		padding-bottom em(10)
-		top em(10)
-		font-size em(45)
 	h4
 		text-transform uppercase
 		font-weight bold
