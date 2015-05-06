@@ -178,7 +178,7 @@ $(document).ready(function(){
 	$navButton = $('.nav-button i');
 	$navBefore = $('.nav-before');
 	$window.scroll(function(){
-		if($window.scrollTop() > $landing.height()){
+		if($window.scrollTop() > $('.landing__info').height()){
 			$nav.addClass('fixed-nav');
 		} else {
 			$nav.removeClass('fixed-nav');
