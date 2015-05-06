@@ -249,22 +249,30 @@ nav
 		font-family serif
 		font-weight 400
 		font-size em(45)
+
 	h4
 		text-transform uppercase
 		font-weight bold
 		font-size em(16)
+	.content-box-header
+		padding em(20) 0
+		text-align center
 	.latest-news
 		col(12)
 		text-align center
 	.video
 		col(12)
 		text-align center
+		.youtube-video-container
+			width 90%
+			margin 0 auto
+			display block
+			background-color #DADADA
+			padding em(7)
 		.youtube-video
 			position relative
-			margin 0 auto
-			width 90%
 			padding-bottom 56.25%
-			padding-top 25px
+			padding-top 20px
 			height 0
 		.youtube-video iframe
 			position absolute
@@ -272,9 +280,9 @@ nav
 			left 0
 			width 100%
 			height 100%
-			padding em(5)
 			background-color #D6D6D6
 			border 1px solid #DADADA
+
 
 +media-query( all, min-device-width 960px, min-width 960px  )
 	.content
@@ -288,11 +296,17 @@ nav
 			margin-bottom em(15)
 		.latest-news-h5
 			margin-bottom em(11)
+	.reviews
+		gs('fixed')
+		.review
+			col(6)
 
 .reviews
 	gs('fluid')
 	margin-top em(60)
 .review
+	col(12)
+	padding em(20) 0
 	.review__avatar
 		col(2)
 		padding em(10) 0
@@ -329,15 +343,15 @@ nav
 			border-radius 5px
 			color white
 			cursor pointer
-	.review__more
-		col(12)
-		text-align right
-		padding em(5) 0
-		a
-			color #5E5E5E
-			text-decoration none
-			font-style italic
-			font-size em(14)
+.reviews__more
+	col(12)
+	text-align right
+	padding em(5) 0
+	a
+		color #5E5E5E
+		text-decoration none
+		font-style italic
+		font-size em(14)
 
 +media-query( only screen, min-device-width 320px, max-device-width 667px)
 	.review
@@ -347,10 +361,10 @@ nav
 		.review__stars
 			li
 				font-size em(35)
-		.review__more
-			padding em(14) 0
-			a
-				font-size em(35)
+	.reviews__more
+		padding em(14) 0
+		a
+			font-size em(35)
 .homepage-prefooter
 	.container
 		gs('fluid')
@@ -361,13 +375,89 @@ nav
 	line-height 1.3
 	font-size em(15)
 	margin-top em(20)
+	h5
+		font-size em(30)
+		font-weight bold
+		position relative
+		font-family serif
+		font-weight 400
+		font-size em(45)
+		padding-bottom em(20)
 	p
 		margin em(15) 0
-		
+	.map-with-form
+		col(12)
+		padding 0
+		margin 0
+	.contact-form
+		col(12)
+	.input-field
+		col(12)
+		margin 0 0
+	.input-field:first-child
+		p 
+			margin-top 0
+	.main-label
+		text-align left
+		font-size em(20)
+		font-weight bold
+		padding em(0) em(10)
+	.input-container, .textarea-container
+		text-align left
+		padding em(0) em(10)
+		box-sizing border-box
+		margin-bottom em(5)
+	.three-digits
+		col(2)
+	.name div
+		col(6)
+	input, textarea
+		width 100%
+		font-size em(20)
+		padding em(5)
+		margin-bottom em(5)
+	label
+		font-size em(15)
+	textarea
+		height 100px
+	button
+		font-size em(20)
+		font-weight bold
+		background-color white
+		border none
+		padding em(10) em(15)
+		border-radius em(100)
+		margin em(20) em(5)
+		float left
+	.map
+		col(12)
+	.map-container
+		width 100%
+		height 500px
 +media-query( all, min-device-width 960px, min-width 960px  )
 	.homepage-prefooter
 		.container
 			gs('fixed')
+		.contact-form
+			col(5)
+			padding 0
+			margin 0
+		.map
+			col(6.5)
+			offset(0.5)
+			float right
+		button
+			margin em(5) em(5) 0
++media-query( only screen, min-device-width 320px, max-device-width 667px)
+	.homepage-prefooter
+		.main-label
+			font-size em(40)
+		input
+			font-size em(40)
+		label
+			font-size em(30)
+		button
+			font-size em(40)
 footer
 	.container
 		gs('fluid')

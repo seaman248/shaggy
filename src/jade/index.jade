@@ -60,35 +60,128 @@ body
 			.content-box-header
 				h5.video-h5 America's Best
 				h4.video-h4 Best of New York
-			.youtube-video
-				|<iframe width="560" height="315" src="https://www.youtube.com/embed/43huYB0QqA4" frameborder="0" allowfullscreen></iframe>
-			.reviews
-				.review
-					.review__avatar
-						img(src="img/avatar.jpg", alt="Avatar")
-					.review__body
-						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium rerum optio expedita harum laborum voluptatem aut veritatis impedit laudantium, quis! Nemo placeat voluptates modi eligendi labore rerum. Veniam, et cumque, illo eius ratione totam voluptatibus quidem, incidunt corporis quasi pariatur!
-					.review__subscribe
-						p Ashley S.
-					.review__stars
-						ul
-							li
-								i.fa.fa-star
-							li
-								i.fa.fa-star
-							li
-								i.fa.fa-star
-							li
-								i.fa.fa-star
-							li
-								i.fa.fa-star
-					p.review__more
-						a(href="#") more reviews
+			.youtube-video-container
+				.youtube-video
+					|<iframe width="560" height="315" src="https://www.youtube.com/embed/43huYB0QqA4" frameborder="0" allowfullscreen></iframe>
+		.reviews
+			.content-box-header
+				h5 Testimonials
+			.review
+				.review__avatar
+					img(src="img/avatar.jpg", alt="Avatar")
+				.review__body
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium rerum optio expedita harum laborum voluptatem aut veritatis impedit laudantium, quis! Nemo placeat voluptates modi eligendi labore rerum. Veniam, et cumque, illo eius ratione totam voluptatibus quidem, incidunt corporis quasi pariatur!
+				.review__subscribe
+					p Ashley S.
+				.review__stars
+					ul
+						li
+							i.fa.fa-star
+						li
+							i.fa.fa-star
+						li
+							i.fa.fa-star
+						li
+							i.fa.fa-star
+						li
+							i.fa.fa-star
+			.review
+				.review__avatar
+					img(src="img/avatar.jpg", alt="Avatar")
+				.review__body
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium rerum optio expedita harum laborum voluptatem aut veritatis impedit laudantium, quis! Nemo placeat voluptates modi eligendi labore rerum. Veniam, et cumque, illo eius ratione totam voluptatibus quidem, incidunt corporis quasi pariatur!
+				.review__subscribe
+					p Ashley S.
+				.review__stars
+					ul
+						li
+							i.fa.fa-star
+						li
+							i.fa.fa-star
+						li
+							i.fa.fa-star
+						li
+							i.fa.fa-star
+						li
+							i.fa.fa-star
+			.review
+				.review__avatar
+					img(src="img/avatar.jpg", alt="Avatar")
+				.review__body
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium rerum optio expedita harum laborum voluptatem aut veritatis impedit laudantium, quis! Nemo placeat voluptates modi eligendi labore rerum. Veniam, et cumque, illo eius ratione totam voluptatibus quidem, incidunt corporis quasi pariatur!
+				.review__subscribe
+					p Ashley S.
+				.review__stars
+					ul
+						li
+							i.fa.fa-star
+						li
+							i.fa.fa-star
+						li
+							i.fa.fa-star
+						li
+							i.fa.fa-star
+						li
+							i.fa.fa-star
+			.review
+				.review__avatar
+					img(src="img/avatar.jpg", alt="Avatar")
+				.review__body
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium rerum optio expedita harum laborum voluptatem aut veritatis impedit laudantium, quis! Nemo placeat voluptates modi eligendi labore rerum. Veniam, et cumque, illo eius ratione totam voluptatibus quidem, incidunt corporis quasi pariatur!
+				.review__subscribe
+					p Ashley S.
+				.review__stars
+					ul
+						li
+							i.fa.fa-star
+						li
+							i.fa.fa-star
+						li
+							i.fa.fa-star
+						li
+							i.fa.fa-star
+						li
+							i.fa.fa-star
+			p.reviews__more
+				a(href="$") more reviews
 	.homepage-prefooter
 		.container
-				p As a full service Salon, Shaggy Hair Studio offers full service makeovers that include hair cuts and styling for both men and women, hair coloring, highlighting, perms, straightening (OSHA formaldehyde safe) and other conditioning treatments. Shaggy Hair Studio also offers makeup services that include L’Oreal Professional products and more. Our team of professional stylists use only the highest quality products including restoring shampoos, conditioners and treatments. Featured in Allure, Glamour, and Time Out Shaggy Hair Studio specializes in transforming dull, flat hair and appearance using our special hydration therapy and innovative restoring procedures that create a healthy, vibrant and sexy look.
-				p As a full service Salon, Shaggy Hair Studio offers full service makeovers that include hair cuts and styling for both men and women, hair coloring, highlighting, perms, straightening (OSHA formaldehyde safe) and other conditioning treatments. Shaggy Hair Studio also offers makeup services that include L’Oreal Professional products and more. Our team of professional stylists use only the highest quality products including restoring shampoos, conditioners and treatments. Featured in Allure, Glamour, and Time Out Shaggy Hair Studio specializes in transforming dull, flat hair and appearance using our special hydration therapy and innovative restoring procedures that create a healthy, vibrant and sexy look.
-				p Come for your free consultation today!
+			h5 Uptown Chic Meets Downtown Cool.
+			.map-with-form
+				.contact-form
+					form
+						.input-field.name
+							p.main-label Name 
+							.input-container
+								input(type="text")
+								label First Name
+							.input-container
+								input(type="text")
+								label Last Name
+						.input-field.email
+							p.main-label Email Address
+							.input-container
+								input(type="text")
+						.input-field.phone
+							p.main-label Phone number
+							.input-container.three-digits
+								input(type="text")
+								label (###)
+							.input-container.three-digits
+								input(type="text")
+								label ###
+							.input-container.three-digits
+								input(type="text")
+								label ###
+						.input-field.message
+							p.main-label Message
+							.textarea-container
+								textarea
+						button(type='submit') Contact us
+				.map
+					.map-container(id="map")
+
+
 	footer
 		.container
 			.footer-addres
@@ -99,5 +192,6 @@ body
 				p <strong> monday-friday </strong> 8 am-8 pm
 				p <strong> saturday-sunday </strong> 10 am-8 pm
 	script(type="application/javascript", src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+	| <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 	script
 		include ./js/index.js
