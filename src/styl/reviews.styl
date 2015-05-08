@@ -1,0 +1,85 @@
+.review
+	col(12)
+	padding em(5) 0
+
+
+.review_container
+	padding 0 em(5)
+	border 1px solid #E1E1E1
+	clearfix()
+.review__avatar
+	col(2)
+	img
+		border-radius 50%
+
+.review__header
+	col(12)
+	
+	.from
+		col(6)
+		padding-top em(5)
+		text-align left
+		img
+			height 20px
+			max-width 100%
+	.date
+		col(6)
+		font-weight bold
+		font-size 60%
+		color #797979
+		text-align right
+		line-height 300%
+
+.review__content
+	col(12)
+	.review-body
+		col(10)
+		box-sizing border-box
+		padding em(10) 0 em(10) em(10)
+		font-size 80%
+		line-height 120%
+		font-family arial
+		font-weight 200
+
+
+.review__footer
+	.name
+		col(12)
+		margin 0
+		padding 0
+		text-align right
+		a
+			font-weight bold
+			font-size 80%
+			color #868686
+			text-decoration none
+	.stars
+		col(12)
+		clearfix()
+		text-align right
+		ul
+			padding em(5) 0
+			margin em(5) 0
+		li
+			display inline-block
+			color #FFC938
+		.no-star
+			color #E3E3E3
+
+.best-review
+	.review_container
+		background-color #313131
+		border-color white
+	.review__content
+		.review-body
+			color white
+	.review__footer
+		.name a
+			color white
+	.review__header
+		.date
+			color white
+
++media-query( all, min-device-width 1080px, min-width 1080px )
+	.review
+		col(4)
