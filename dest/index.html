@@ -247,7 +247,7 @@
 		$navLogo = $('.nav-logo');
 		if($landing.length){
 			$window.scroll(function(){
-				if($window.scrollTop() > $('.landing__info').height()){
+				if($window.scrollTop() > $('.landing__info').height()/2){
 					if(!isMobile(960)){
 						$nav.addClass('fixed-nav');
 						$navLinks.addClass('nav-links-with-logo');
