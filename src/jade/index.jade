@@ -30,8 +30,8 @@ body
 						a(href="#") About Us
 					li
 						a(href="#" class="ScrollToContact") Contact
-	include ./main.jade
-	//- include ./service.jade
+	//- include ./main.jade
+	include ./service.jade
 	//- include ./about.jade
 	//- include ./reviews.jade
 	.homepage-prefooter
@@ -44,25 +44,15 @@ body
 							p.main-label Name 
 							.input-container
 								input(type="text")
-								label First Name
-							.input-container
-								input(type="text")
-								label Last Name
 						.input-field.email
 							p.main-label Email Address
 							.input-container
-								input(type="text")
+								input(type="email")
 						.input-field.phone
 							p.main-label Phone number
 							.input-container.three-digits
-								input(type="text")
-								label (###)
-							.input-container.three-digits
-								input(type="text")
-								label ###
-							.input-container.three-digits
-								input(type="text")
-								label ###
+								input(type="phone")
+								label (###)-###-###
 						.input-field.message
 							p.main-label Message
 							.textarea-container
@@ -79,8 +69,9 @@ body
 			.footer-phone
 				p 212 772 2288
 			.footer-schedule
-				p <strong> monday-friday </strong> 8 am-8 pm
-				p <strong> saturday-sunday </strong> 10 am-8
+				.footer-schedule-container
+					p <strong> monday-friday </strong> 8 am-8 pm
+					p <strong> saturday-sunday </strong> 10 am-8
 	.yelp-wiget
 		a(href="http://www.yelp.com/biz/shaggy-hair-studio-new-york", target="_blank")
 			img(src="./img/yelp.png" alt='Yelp wiget')
