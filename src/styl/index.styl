@@ -253,7 +253,6 @@ nav
 	gs('fluid')
 	clearfix()
 	h5
-		font-size em(30)
 		font-weight bold
 		position relative
 		font-family serif
@@ -297,6 +296,8 @@ nav
 +media-query( all, min-device-width 1080px, min-width 1080px  )
 	.content
 		gs('fixed', 12, 60px, 30px)
+		h5
+			font-size em(38)
 		.latest-news
 			col(6)
 		.video
@@ -305,7 +306,7 @@ nav
 			padding em(15) 0 0
 			margin-bottom em(15)
 		.latest-news-h5
-			margin-bottom em(11)
+			margin-bottom em(14)
 	.reviews
 		gs('fixed', 12, 60px, 30px)
 		.review
@@ -379,8 +380,7 @@ nav
 .magazine-links
 	.container
 		gs('fluid')
-	padding em(20) 0
-	h4
+	h5
 		font-size em(30)
 		font-weight bold
 		position relative
@@ -392,12 +392,17 @@ nav
 	.imgs
 		text-align center
 	img
-		height 60px
 		padding 0 em(10)
 +media-query( all, min-device-width 1080px, min-width 1080px  )
 	.magazine-links
-		.container
-			gs('fixed', 12, 60px, 30px)
+		h5
+			font-size em(28)
+		.imgs
+			text-align center
+			a
+				display block
+				width 100%
+				padding em(10) 0
 
 .homepage-prefooter
 	.container

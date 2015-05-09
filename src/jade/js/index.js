@@ -113,6 +113,10 @@
 		$("html, body").animate({ scrollTop: scrollToContact + $window.height() }, 1000);
 	});
 
+	$('.magazine-links').css({
+		'margin-top': (790 - $('.youtube-video-container').height()-$('.magazine-links').height())/2
+	})
+
 })(jQuery);
 
 google.maps.event.addDomListener(window, 'load', init);
