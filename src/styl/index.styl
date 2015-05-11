@@ -292,6 +292,8 @@ nav
 		text-align center
 		.youtube-video-container
 			width 95%
+			+media-query( only screen, min-device-width 320px, max-device-width 667px)
+				width 60%
 			margin 0 auto
 			display block
 		.youtube-video
@@ -355,6 +357,8 @@ nav
 	h5
 		text-align center
 		font-size 130%
+		+media-query( only screen, min-device-width 320px, max-device-width 667px)
+			font-size 200%
 		padding em(15) 0
 		font-weight bold
 		font-family sans
@@ -366,6 +370,8 @@ nav
 			padding em(20) 0 em(20)
 			color #898988
 			text-decoration none
+			+media-query( only screen, min-device-width 320px, max-device-width 667px)
+				font-size em(30)
 	.magazine-links
 		padding em(50) 0 0
 		margin 0
@@ -373,102 +379,12 @@ nav
 		h6
 			padding em(20) 0 em(20)
 			color #898988
+			+media-query( only screen, min-device-width 320px, max-device-width 667px)
+				font-size em(22)
 		img
 			height 60px
 			padding em(5) em(5)
-.homepage-prefooter
-	.container
-		gs('fluid')
-	background-color black
-	color white
-	text-align center
-	padding em(20)
-	line-height 1.3
-	font-size em(15)
-	margin-top em(20)
-	h5
-		font-size em(30)
-		font-weight bold
-		position relative
-		font-family serif
-		font-weight 400
-		font-size em(45)
-		padding-bottom em(20)
-	p
-		margin em(15) 0
-	.map-with-form
-		col(12)
-		padding 0
-		margin 0
-	.contact-form
-		col(12)
-	.input-field
-		col(12)
-		margin 0 0
-	.input-field:first-child
-		p 
-			margin-top 0
-	.main-label
-		text-align left
-		font-size em(20)
-		font-weight bold
-		padding em(0) em(10)
-	.input-container, .textarea-container
-		text-align left
-		padding em(0) em(10)
-		box-sizing border-box
-		margin-bottom em(5)
-	.three-digits
-		col(12)
-	.name div
-		col(12)
-	input, textarea
-		width 100%
-		font-size em(20)
-		padding em(5)
-		margin-bottom em(5)
-		border none
-	label
-		font-size em(15)
-	textarea
-		height 100px
-	button
-		font-size em(20)
-		font-weight bold
-		background-color white
-		border none
-		padding em(10) em(15)
-		border-radius em(100)
-		margin em(20) em(5)
-		float left
-	.map
-		col(12)
-	.map-container
-		width 100%
-+media-query( all, min-device-width 1080px, min-width 1080px  )
-	.homepage-prefooter
-		.container
-			gs('fixed', 12, 60px, 30px)
-		.contact-form
-			col(5)
-			padding 0
-			margin 0
-		.map
-			col(6.5)
-			offset(0.5)
-			float right
-		button
-			margin em(5) em(5) 0
-+media-query( only screen, min-device-width 320px, max-device-width 667px)
-	.homepage-prefooter
-		.main-label
-			font-size em(40)
-		input
-			font-size em(40)
-		label
-			font-size em(30)
-		button
-			font-size em(40)
+@import './main-footer.styl'
 footer
 	.container
 		gs('fluid')
@@ -509,8 +425,6 @@ footer
 +media-query( only screen, min-device-width 320px, max-device-width 667px)
 	.footer-addres p, .footer-phone p, .footer-schedule p
 		font-size em(35)
-	.homepage-prefooter p
-		font-size em(15)
 
 .yelp-wiget
 	text-align center

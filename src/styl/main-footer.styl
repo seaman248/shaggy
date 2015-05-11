@@ -1,0 +1,111 @@
+.homepage-prefooter
+	background-color black
+	color white
+	padding em(40) 0 em(20)
+	.container
+		gs('fluid')
+	+media-query( all, min-device-width 1080px, min-width 1080px )
+		.container
+			gs('fixed', 12, 60px, 30px)
+
+
+	.map-with-form
+		gs('fluid')
+	.contact-form
+		col(12)
+		+media-query( all, min-device-width 1080px, min-width 1080px )
+			width auto
+			float left
+
+
+	h5
+		font-size 150%
+		+media-query( only screen, min-device-width 320px, max-device-width 667px)
+			font-size 170%
+		text-align center
+
+	p.phone
+		text-align center
+		font-size 90%
+		font-weight bold
+		padding em(20) 0
+		+media-query( only screen, min-device-width 320px, max-device-width 667px)
+			font-size 200%
+		
+	.scissors-image
+		text-align center
+		
+	form
+		width 50%
+		margin 0 auto
+		padding em(10) 0
+	.input-field
+		padding em(20) 0
+		
+	.main-label
+		padding 0 0 em(15) em(5)
+		font-size 90%
+		font-weight bold
+		text-align left
+		+media-query( only screen, min-device-width 320px, max-device-width 667px)
+			font-size 120%
+	input
+		width 100%
+		padding em(8) em(5)
+		background-color #7A7977
+		border none
+		color white
+		font-size 105%
+		+media-query( only screen, min-device-width 320px, max-device-width 667px)
+			font-size 200%
+	button
+		text-align center
+		background-color white
+		font-weight bold
+		border none
+		padding em(15) em(20)
+		border-radius 100px
+		cursor pointer
+		margin em(50) auto
+		+media-query( only screen, min-device-width 320px, max-device-width 667px)
+			font-size em(25)
+			padding em(13) em(15)
+
+	.map
+		col(12)
+		+media-query( all, min-device-width 1080px, min-width 1080px )
+			width auto
+			float right
+
+
+	.map-shaggy-logo
+		text-align center
+		img
+			height 55px
+			+media-query( only screen, min-device-width 320px, max-device-width 667px)
+				height 70px
+
+	.schedule
+		text-align center
+		padding em(20) 0
+		text-transform uppercase
+		+media-query( only screen, min-device-width 320px, max-device-width 667px)
+			font-size em(30)
+		strong
+			font-weight bold
+	.address
+		text-align center
+		font-weight bold
+		text-transform uppercase
+		padding em(20) 0
+		+media-query( only screen, min-device-width 320px, max-device-width 667px)
+			font-size em(30)
+	.map-container
+		
+		margin 0 auto
+		size em(300)
+		+media-query( only screen, min-device-width 320px, max-device-width 667px)
+			size em(400)
+
+
+

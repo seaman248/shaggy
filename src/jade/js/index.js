@@ -54,8 +54,6 @@
 			})
 		}
 
-		$('.map-container').height($('.contact-form').height());
-
 		$navButton.on('click',function(){
 			if($navLinks.is(':visible')){
 				$navLinks.slideUp();
@@ -110,12 +108,19 @@
 			autoHeightPanel2();
 			autoHeightPanel3();
 		});
-	});
 
-	var scrollToContact = $('.homepage-prefooter').offset().top;
+		if($(location).attr('hash') === '#contact'){
+			doScrollToContact();
+		}
+	});
+	var doScrollToContact = function(){
+		var scrollToContact = $('.homepage-prefooter').offset().top;
+		$("html, body").animate({ scrollTop: scrollToContact + $window.height() }, 1000);
+	}
+	
 	$('.ScrollToContact').on('click', function(e){
 		e.preventDefault();
-		$("html, body").animate({ scrollTop: scrollToContact + $window.height() }, 1000);
+		doScrollToContact();
 	});
 
 	var $scrollToPanel2Button = $('#to-panel2');
@@ -150,8 +155,7 @@
 		if(!$navButton.is(':visible')){
 			$panel2.css({
 				'padding-top': ($window.height() - $panel2Container.height())/7 + 'px',
-				'padding-bottom': ($window.height() - $panel2Container.height())/11 + 'px',
-				'background-color': 'green'
+				'padding-bottom': ($window.height() - $panel2Container.height())/11 + 'px'
 			})
 		}
 	}

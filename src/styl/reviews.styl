@@ -9,6 +9,9 @@
 		text-align: center;
 .review
 	col(12)
+	+media-query( only screen, min-device-width 320px, max-device-width 667px)
+		col(11)
+		offset(0.5)
 	padding em(5) 0
 
 
@@ -31,6 +34,8 @@
 		text-align left
 		img
 			height 25px
+			+media-query( only screen, min-device-width 320px, max-device-width 667px)
+				height 50px
 			max-width 100%
 	.date
 		col(6)
@@ -39,6 +44,8 @@
 		color #797979
 		text-align right
 		line-height 300%
+		+media-query( only screen, min-device-width 320px, max-device-width 667px)
+			font-size 130%
 
 .review__content
 	col(12)
@@ -50,6 +57,8 @@
 		line-height 120%
 		font-family arial
 		font-weight 200
+		+media-query( only screen, min-device-width 320px, max-device-width 667px)
+			font-size 85%
 
 
 .review__footer
@@ -63,6 +72,8 @@
 			font-size 80%
 			color #868686
 			text-decoration none
+			+media-query( only screen, min-device-width 320px, max-device-width 667px)
+				font-size 170%
 	.stars
 		col(12)
 		clearfix()
@@ -73,6 +84,8 @@
 		li
 			display inline-block
 			color #FFC938
+			+media-query( only screen, min-device-width 320px, max-device-width 667px)
+				font-size em(30)
 		.no-star
 			color #E3E3E3
 

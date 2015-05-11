@@ -29,50 +29,51 @@ body
 					li
 						a(href="#") About Us
 					li
-						a(href="#" class="ScrollToContact") Contact
+						a(href="#contact" class="ScrollToContact") Contact
 	include ./main.jade
 	//- include ./service.jade
 	//- include ./about.jade
 	//- include ./reviews.jade
-	.homepage-prefooter
+	.homepage-prefooter.panel4
 		.container
-			
 			.map-with-form
 				.contact-form
 					h5 Uptown Chic Meets Downtown Cool.
+					p.phone 212 772 2288
+					.scissors-image
+						img(src="./img/scissors.png" height='70px')
 					form
 						.input-field.name
 							p.main-label Name 
-							.input-container
-								input(type="text")
+							input(type="text")
 						.input-field.email
-							p.main-label Email Address
-							.input-container
-								input(type="email")
+							p.main-label Email
+							input(type="email")
 						.input-field.phone
 							p.main-label Phone number
-							.input-container.three-digits
-								input(type="phone")
-								label (###)-###-###
-						.input-field.message
-							p.main-label Message
-							.textarea-container
-								textarea
+							input(type="phone")
 						button(type='submit') Contact us
 				.map
+					.map-shaggy-logo
+						img(src="./img/shaggy.png")
+					.schedule
+						p <strong> monday-friday </strong> 8 am-8 pm
+						p <strong> saturday-sunday </strong> 10 am-8
+					.address
+						p 1405 third ave new york, ny 10075 <br> between e 79th and e 80th st
 					.map-container(id="map")
 
 
-	footer
-		.container
-			.footer-addres
-				p 1405 third ave new york, ny 10075 between e 79th and e 80th st
-			.footer-phone
-				p 212 772 2288
-			.footer-schedule
-				.footer-schedule-container
-					p <strong> monday-friday </strong> 8 am-8 pm
-					p <strong> saturday-sunday </strong> 10 am-8
+	//- footer
+	//- 	.container
+	//- 		.footer-addres
+	//- 			p 1405 third ave new york, ny 10075 between e 79th and e 80th st
+	//- 		.footer-phone
+	//- 			p 212 772 2288
+	//- 		.footer-schedule
+	//- 			.footer-schedule-container
+	//- 				p <strong> monday-friday </strong> 8 am-8 pm
+	//- 				p <strong> saturday-sunday </strong> 10 am-8
 	//- .yelp-wiget
 	//- 	a(href="http://www.yelp.com/biz/shaggy-hair-studio-new-york", target="_blank")
 	//- 		img(src="./img/yelp.png" alt='Yelp wiget')
