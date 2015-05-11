@@ -14,37 +14,48 @@
 						p.day monday-friday
 						p.time 8 am-8 pm
 					.days
-						p.day saturday - sunday
+						p.day saturday-sunday
 						p.time 10 am-8 pm
-			.landing__loreal-logo
-				img(src="./img/loreal.png", alt="Loreal logo")
+			
 			.landing__footer
-				p Upper East Side Hair Salon
+				.landing__footer-slogan
+					p Upper East Side Hair Salon
+				.landing__loreal-logo
+					img(src="./img/loreal.png", alt="Loreal logo")
+.sub-landing-arrow
+	.arrow-container
+		i.fa.fa-angle-down(id="to-panel2")
 .content
-		.latest-news
-			.content-box-header
-				h5.latest-news-h5 Latest News
-			.fb-resize
-				|<div id="fb-root"></div><script>(function(d, s, id) {  var js, fjs = d.getElementsByTagName(s)[0];  if (d.getElementById(id)) return;  js = d.createElement(s); js.id = id;  js.src = "https://connect.facebook.net/en_EN/sdk.js#xfbml=1&version=v2.3";  fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script><div class="fb-page" data-href="https://www.facebook.com/pages/Shaggy-Hair-Studio/130935616937584?fref=ts" data-width="650" data-height="790" data-hide-cover="false" data-show-facepile="false" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/pages/Shaggy-Hair-Studio/130935616937584?fref=ts"><a href="https://www.facebook.com/pages/Shaggy-Hair-Studio/130935616937584?fref=ts">Shaggy Hair Studio</a></blockquote></div></div>
-		.video
-			.content-box-header
-				h5.video-h5 America's Best
-				h4.video-h4 Best of New York
-			.youtube-video-container
-				.youtube-video
-					|<iframe width="560" height="315" src="https://www.youtube.com/embed/43huYB0QqA4" frameborder="0" allowfullscreen></iframe>
-			.magazine-links
-				.container
-					h5 As seen in...
-					.imgs
-						a(href="#", target="_blank")
-							img(src="./img/timeout_logo.jpg", alt="")
-						a(href="#", target="_blank")
-							img(src="./img/allure_printlogo.gif", alt="")
-						a(href="#", target="_blank")
-							img(src="./img/logo_glamour.png", alt="")
+	.panel2
+		.panel2-conteiner
+			.latest-news
+				.content-box-header
+					h5.latest-news-h5 Latest News
+				.fb-resize
+					|<div id="fb-root"></div><script>(function(d, s, id) {  var js, fjs = d.getElementsByTagName(s)[0];  if (d.getElementById(id)) return;  js = d.createElement(s); js.id = id;  js.src = "https://connect.facebook.net/en_EN/sdk.js#xfbml=1&version=v2.3";  fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script><div class="fb-page" data-href="https://www.facebook.com/pages/Shaggy-Hair-Studio/130935616937584?fref=ts" data-width="430" data-height="410" data-hide-cover="false" data-show-facepile="false" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/pages/Shaggy-Hair-Studio/130935616937584?fref=ts"><a href="https://www.facebook.com/pages/Shaggy-Hair-Studio/130935616937584?fref=ts">Shaggy Hair Studio</a></blockquote></div></div>
+				.second-panel-button
+					a(href="https://www.facebook.com/pages/Shaggy-Hair-Studio/130935616937584?fref=ts", target="_blank")
+						i.fa.fa-facebook
+						| Shaggy on Facebook
+			.video
+				.content-box-header
+					h5.video-h5 America's Best
+					h4.video-h4 Best of New York
+				.youtube-video-container
+					.youtube-video
+						|<iframe width="560" height="315" src="https://www.youtube.com/embed/43huYB0QqA4" frameborder="0" allowfullscreen></iframe>
+				.second-panel-button
+					a(href="/gallery", target="_blank")
+						| See Gallery
+						i.fa.fa-camera
+			.sub-landing-arrow
+				.arrow-container
+					i.fa.fa-angle-down(id='to-panel3')
+	.panel3
+		.panel3-image
+			img(src="./img/shaggy-black.png", alt="")
+		h5 Styling New York City since 2009
 		.reviews-content
-			h2 Testimonials
 			.review
 				.review_container
 					.review__header
@@ -75,7 +86,7 @@
 				.review_container
 					.review__header
 						.from
-							img(src="https://ssl.gstatic.com/s2/oz/images/logo/2x/googleplus_color_33-99ce54a16a32f6edc61a3e709eb61d31.png")
+							img(src="http://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_styleguide/e0bcd848f6ae/assets/img/structural/header_logo.png")
 						.date
 							p 2 month ago
 					.review__content
@@ -101,7 +112,7 @@
 				.review_container
 					.review__header
 						.from
-							img(src="https://ssl.gstatic.com/s2/oz/images/logo/2x/googleplus_color_33-99ce54a16a32f6edc61a3e709eb61d31.png")
+							img(src="http://aws1-images2.citysearch.net/jawr/reinvent/img/cb2419967867/assets/reinvent/img/citysearch/logo_footer.png")
 						.date
 							p 2 month ago
 					.review__content
@@ -123,4 +134,21 @@
 									i.fa.fa-star
 								li.no-star
 									i.fa.fa-star
-	
+		.review-more-link
+			a(href="#") see more reviews
+		.yelp-wiget
+			a(href="http://www.yelp.com/biz/shaggy-hair-studio-new-york", target="_blank")
+				img(src="./img/yelp.png" alt='Yelp wiget')
+		.magazine-links
+			.container
+				h6 as seen in...
+				.imgs
+					a(href="#", target="_blank")
+						img(src="./img/timeout_logo.jpg", alt="")
+					a(href="#", target="_blank")
+						img(src="./img/allure_printlogo.gif", alt="")
+					a(href="#", target="_blank")
+						img(src="./img/logo_glamour.png", alt="")
+		.sub-landing-arrow
+				.arrow-container
+					i.fa.fa-angle-down(id='to-panel4')

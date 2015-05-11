@@ -17,6 +17,8 @@
 		$navButton = $('.nav-button i');
 		$navBefore = $('.nav-before');
 		$navLogo = $('.nav-logo');
+
+
 		if($landing.length){
 			$window.scroll(function(){
 				if($window.scrollTop() > $('.landing__info').height()/2){
@@ -81,23 +83,20 @@
 				$navLinks.hide();
 			}
 		})
-		$lorealLogo = $('.landing__loreal-logo')
+		$landingFooter = $('.landing__footer');
+		$landingInfo = $('.landing__info');
+		$subLandingArrow = $('.sub-landing-arrow');
 		var autoHeightLanging = function(){
-			var lorealMarginTop;
-			var diff;
-			if(screen.width < 760){
-				diff = 550;
+			var landingFooterPaddingTop;
+			if(!$navButton.is(':visible') && screen.width >760){
+				landingFooterPaddingTop = $window.height() - $landingInfo.outerHeight(true) - $landingFooter.height() - $subLandingArrow.height()/2 - 20;
+			} else if ($navButton.is(':visible') && screen.width <760) {
+				landingFooterPaddingTop = $window.height() - $landingInfo.outerHeight(true)*2 - $landingFooter.height() - $subLandingArrow.height()/2 + 145;
 			} else {
-				diff = 130;
+				landingFooterPaddingTop = $window.height() - $landingInfo.outerHeight(true) - $landingFooter.height() - $subLandingArrow.height()/2 -145;
 			}
-			lorealMarginTop =
-				$window.height() 
-				- diff
-				- $('.landing__info').height() 
-				- $lorealLogo.height() 
-				- $('.landing__footer').height();
-			$lorealLogo.css({
-				'margin-top': lorealMarginTop
+			$('.landing__footer').css({
+				'margin-top': landingFooterPaddingTop
 			});
 		}
 		autoHeightLanging();
@@ -105,6 +104,12 @@
 			autoHeightLanging();
 		});
 
+		autoHeightPanel2();
+		autoHeightPanel3();
+		$window.resize(function(){
+			autoHeightPanel2();
+			autoHeightPanel3();
+		});
 	});
 
 	var scrollToContact = $('.homepage-prefooter').offset().top;
@@ -113,10 +118,53 @@
 		$("html, body").animate({ scrollTop: scrollToContact + $window.height() }, 1000);
 	});
 
-	$('.magazine-links').css({
-		'margin-top': (790 - $('.youtube-video-container').height()-$('.magazine-links').height())/2
+	var $scrollToPanel2Button = $('#to-panel2');
+
+	$scrollToPanel2Button.on('click', function(){
+		var scrollToPanel2Px = $('.panel2').offset().top;
+		$('html, body').animate({ scrollTop: scrollToPanel2Px - $nav.height() }, 1000)
 	})
 
+	var $scrollToPanel3Button = $('#to-panel3');
+
+	$scrollToPanel3Button.on('click', function(){
+		var scrollToPanel3Px = $('.panel3').offset().top;
+		$('html, body').animate({ scrollTop: scrollToPanel3Px - $nav.height() }, 1000)
+	})
+
+	var $scrollToPanel4Button = $('#to-panel4');
+
+	$scrollToPanel4Button.on('click', function(){
+		var scrollToPanel4Px = $('.panel4').offset().top;
+		$('html, body').animate({ scrollTop: scrollToPanel4Px - $nav.height() }, 1000)
+	})
+
+	// Bouncing arrow-down
+	setInterval(function(){
+		$('.arrow-container').effect("bounce", {times: 3}, 800);
+	}, 3000)
+	
+	var $panel2 = $('.panel2');
+	var $panel2Container = $('.panel2-container');
+	var autoHeightPanel2 = function(){
+		if(!$navButton.is(':visible')){
+			$panel2.css({
+				'padding-top': ($window.height() - $panel2Container.height())/7 + 'px',
+				'padding-bottom': ($window.height() - $panel2Container.height())/11 + 'px',
+				'background-color': 'green'
+			})
+		}
+	}
+
+	var $panel3 = $('.panel3');
+	var $panel3DownButtonBlock = $('.panel3 .sub-landing-arrow')
+	var autoHeightPanel3 = function(){
+		if(!$navButton.is(':visible') && $window.height()>$panel3.height()){
+			$panel3DownButtonBlock.css({
+				'margin-top': $window.height() - $panel3.height()
+			})
+		}
+	}
 })(jQuery);
 
 google.maps.event.addDomListener(window, 'load', init);

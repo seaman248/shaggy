@@ -178,31 +178,37 @@ nav
 .landing__footer
 	col(12)
 	color white
-	font-size em(14)
-	font-style italic
-	text-align center
-	margin-top em(50)
+	font-size 90%
 	background-color black
-	padding em(10)
+	padding-top em(10)
+.landing__footer-slogan
+	col(6)
+	margin em(32) 0 0
+	text-align center
 .landing__loreal-logo
-	col(12)
+	col(6)
+	float right
 	text-align right
-	margin-top em(100)
+	margin-right 0
+
 
 +media-query( only screen, min-device-width 320px, max-device-width 667px)
 	.landing
-		padding-top rem(450)
+		padding-top 330px
 	.landing__info
-		top rem(-420)
+		top -330px
+		padding-top em(30)
 		.logo
 			img
 				width 40%
-		.phone .number
-			font-size rem(50)
+		.phone p
+			font-size rem(40)
+		.phone .number p
+			font-size rem(45)
 		.adress
-			padding 0 em(300)
-			font-size em(13)
-			margin em(45) 0
+			font-size em(30)
+			padding 0 em(100)
+			margin em(25) 0
 		.schedule
 			p
 				font-size em(30)
@@ -211,8 +217,11 @@ nav
 		background-color black
 		padding em(10) 0
 	.landing__loreal-logo
-		img
-			width 30%
+		col(12)
+		text-align center
+		padding em(10) 0
+	.landing__footer-slogan
+		col(12)
 
 +media-query( all, min-device-width 1080px, min-width 1080px  )
 	.landing
@@ -223,17 +232,17 @@ nav
 		background-position top center
 		background-repeat no-repeat
 		background-size cover
-		margin-bottom em(30)
+		margin-bottom 0
 		.container
 			gs('fixed', 12, 60px, 30px)
 			background none
 
 	.landing__footer
-		col(4)
-		text-align center
+		col(12)
 		background none
-		margin-left 0
-		padding em(10) 0
+	.landing__footer-slogan
+		col(3.7)
+		margin em(32) 0 0
 	.landing__loreal-logo
 		text-align right
 	.landing__info
@@ -249,6 +258,15 @@ nav
 				margin-right 0
 				padding-bottom em(15)
 
+.sub-landing-arrow
+	gs('fluid')
+	.arrow-container
+		text-align center
+		padding-top em(5)
+		padding-bottom em(30)
+		font-size 300%
+		i
+			cursor pointer
 .content
 	gs('fluid')
 	clearfix()
@@ -273,11 +291,9 @@ nav
 		col(12)
 		text-align center
 		.youtube-video-container
-			width 90%
+			width 95%
 			margin 0 auto
 			display block
-			background-color #DADADA
-			padding em(7)
 		.youtube-video
 			position relative
 			padding-bottom 56.25%
@@ -291,8 +307,26 @@ nav
 			height 100%
 			background-color #D6D6D6
 			border 1px solid #DADADA
-
-
+	.second-panel-button
+		col(12)
+		text-align center
+		padding em(40) 0
+		a
+			background-color black
+			border-radius 100px
+			padding em(10) em(20)
+			text-decoration none
+			color white
+			transition-property background-color color
+			transition-duration 0.6s
+		i
+			padding em(0) em(10)
+		a:hover
+			background-color white
+			color black
+			border 1px solid black
+.panel2-conteiner
+	clearfix()
 +media-query( all, min-device-width 1080px, min-width 1080px  )
 	.content
 		gs('fixed', 12, 60px, 30px)
@@ -311,99 +345,37 @@ nav
 		gs('fixed', 12, 60px, 30px)
 		.review
 			col(6)
-
-.reviews
-	gs('fluid')
-	margin-top em(60)
-.review
-	col(12)
-	padding em(20) 0
-	.review__avatar
-		col(2)
-		padding em(10) 0
+.panel3
+	padding-top em(30)
+	.panel3-image
+		text-align center
+		padding 0 0 em(10)
 		img
-			max-width 100%
-			padding 0
-			margin 0
-	.review__body
-		col(10)
-		text-align left
-		font-size em(14)
-		p:before, p:after
-			content ' " '
-		p
-			padding-left em(10)
-			font-style italic
-			color #525252
-	.review__subscribe
-		col(12)
-		text-align right
-		font-weight bold
-		padding em(10) 0
-		font-size em(13)
-		font-style italic
-	.review__stars
-		col(12)
-		ul
-			float right
-		li
-			float left
-			padding em(4)
-			background-color red
-			margin 0 em(2)
-			border-radius 5px
-			color white
-			cursor pointer
-.reviews__more
-	col(12)
-	text-align right
-	padding em(5) 0
-	a
-		color #5E5E5E
-		text-decoration none
-		font-style italic
-		font-size em(14)
-
-+media-query( only screen, min-device-width 320px, max-device-width 667px)
-	.review
-		.review__subscribe
-			p
-				font-size em(35)
-		.review__stars
-			li
-				font-size em(35)
-	.reviews__more
-		padding em(14) 0
-		a
-			font-size em(35)
-
-.magazine-links
-	.container
-		gs('fluid')
+			height 70px
 	h5
-		font-size em(30)
+		text-align center
+		font-size 130%
+		padding em(15) 0
 		font-weight bold
-		position relative
-		font-family serif
-		font-weight 400
-		font-size em(45)
-		padding-bottom em(10)
+		font-family sans
+	.review-more-link
 		text-align center
-	.imgs
-		text-align center
-	img
-		padding 0 em(10)
-+media-query( all, min-device-width 1080px, min-width 1080px  )
+		padding em(20) 0 0
+		a
+			display inline-block
+			padding em(20) 0 em(20)
+			color #898988
+			text-decoration none
 	.magazine-links
-		h5
-			font-size em(28)
-		.imgs
-			text-align center
-			a
-				display block
-				width 100%
-				padding em(10) 0
-
+		padding em(50) 0 0
+		margin 0
+		text-align center
+		h6
+			padding em(20) 0 em(20)
+			color #898988
+		img
+			height 60px
+			padding em(5) em(5)
 .homepage-prefooter
 	.container
 		gs('fluid')

@@ -36,9 +36,10 @@ body
 	//- include ./reviews.jade
 	.homepage-prefooter
 		.container
-			h5 Uptown Chic Meets Downtown Cool.
+			
 			.map-with-form
 				.contact-form
+					h5 Uptown Chic Meets Downtown Cool.
 					form
 						.input-field.name
 							p.main-label Name 
@@ -72,10 +73,11 @@ body
 				.footer-schedule-container
 					p <strong> monday-friday </strong> 8 am-8 pm
 					p <strong> saturday-sunday </strong> 10 am-8
-	.yelp-wiget
-		a(href="http://www.yelp.com/biz/shaggy-hair-studio-new-york", target="_blank")
-			img(src="./img/yelp.png" alt='Yelp wiget')
+	//- .yelp-wiget
+	//- 	a(href="http://www.yelp.com/biz/shaggy-hair-studio-new-york", target="_blank")
+	//- 		img(src="./img/yelp.png" alt='Yelp wiget')
 	script(type="application/javascript", src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+	|<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
 	|<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 	script
 		include ./js/index.js
