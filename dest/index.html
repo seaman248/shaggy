@@ -310,11 +310,11 @@
 		var autoHeightLanging = function(){
 			var landingFooterPaddingTop;
 			if(!$navButton.is(':visible') && screen.width >760){
-				landingFooterPaddingTop = $window.height() - $landingInfo.outerHeight(true) - $landingFooter.height() - $subLandingArrow.height()/2 - 20;
+				landingFooterPaddingTop = $window.height() - $landingInfo.outerHeight(true) - $landingFooter.height() - $subLandingArrow.height()/2 -50;
 			} else if ($navButton.is(':visible') && screen.width <760) {
-				landingFooterPaddingTop = $window.height() - $landingInfo.outerHeight(true)*2 - $landingFooter.height() - $subLandingArrow.height()/2 + 145;
+				landingFooterPaddingTop = $window.height() - $landingInfo.outerHeight(true)*2 - $landingFooter.height() - $subLandingArrow.height()/2 + 120;
 			} else {
-				landingFooterPaddingTop = $window.height() - $landingInfo.outerHeight(true) - $landingFooter.height() - $subLandingArrow.height()/2 -145;
+				landingFooterPaddingTop = $window.height() - $landingInfo.outerHeight(true) - $landingFooter.height() - $subLandingArrow.height()/2 -185;
 			}
 			$('.landing__footer').css({
 				'margin-top': landingFooterPaddingTop
